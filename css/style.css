@@ -1,0 +1,560 @@
+/*
+	© Команда FTS.DIGITAL, 2018
+	Все права защищены.
+*/
+	
+	html{margin:0; padding:0; background:#F8F8F8;}
+	body{margin:0; padding:0;}
+
+	.clear{clear:both;}
+	.wrapper{width:1100px; margin:0 auto;}
+
+	h1{font-family:SF_FONT; font-weight:600; font-size:30px; color:#171719; margin:40px 0; padding:0; margin-top:30px;}
+	h2{font-family:SF_FONT; font-weight:600; font-size:25px; color:#171719; margin:0; padding:0; margin-top:30px; margin-bottom:15px;}
+	h3{font-family:SF_FONT; font-weight:600; font-size:20px; color:#171719; margin:0; padding:0; margin-top:30px; margin-bottom:15px;}
+	p{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; margin:0; padding:0; margin-top:30px; margin-bottom:15px;}
+
+	header{background:#fff; padding:40px 0; padding-bottom:25px; position:relative; z-index:900;
+		background: rgb(32,78,121);
+		background: -moz-linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+		background: -webkit-linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+		background: linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#204e79",endColorstr="#163755",GradientType=1);
+	}
+	header .burger{display:none;}
+	header .logo{width:719px; height:97px; float:left; background:url(../img/logo_white.png)no-repeat 0% 50%; background-size:contain; position:relative; top:-10px;}
+	header .buttonblock{width:30%; text-align:center; float:left;}
+	header .buttonblock .btn{padding:10px 20px; background:#204E78; font-family:SF_FONT; font-weight:500; font-size:100%; color:#fff; text-decoration:none; outline:none; border-radius:3px; position:relative; top:15px; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease;}
+	header .buttonblock .btn:hover{box-shadow:0 0px 0px transparent;}
+	header .contacts{width:calc(70% - 400px); float:right; position:relative; top:-18px;}
+	header .contacts .phone{margin:15px 0;}
+	header .contacts .phone .icon{width:25px; height:25px; background:url(../img/phone.svg)no-repeat 50% 50%; background-size:100%; float:left; margin-right:10px;}
+	header .contacts .phone .text{font-family:SF_FONT; font-weight:700; font-size:140%; color:#fff;}
+	header .contacts .address{margin:10px 0;}
+	header .contacts .btn{padding:10px 29px; background:#204E78; font-family:SF_FONT; font-weight:500; font-size:100%; color:#fff; text-decoration:none; outline:none; border-radius:3px; position:relative; top:15px; box-shadow:0 15px 30px #00000011; transition:all 500ms ease;}
+	header .contacts .btn:hover{box-shadow:0 0px 0px transparent;}
+
+	nav{background:#344C64; padding:1px 0; text-align:justify; box-shadow:0 15px 50px rgba(0,0,0,0.3); position:relative; z-index:899;}
+/*	nav a{font-family:SF_FONT; font-weight:500; font-size:100%; color:#171719; outline:none; text-decoration:none; margin-right:60px; transition:all 500ms ease;}
+	nav a:hover{color:#204E78;}
+	nav .active{color:#204E78; font-weight:700;}*/
+
+	.banner{width:100%; height:500px; position:relative; z-index:898; box-shadow:0 15px 50px rgba(0,0,0,0.2); overflow:hidden;}
+	.banner .items{width:100%; height:500px; margin:0; padding:0; position:relative; transition:all 1s ease;}
+	.banner .items .item{width:100%; height:100%; display:block; margin:0; padding:0; transition:all 1s ease; opacity:0; position:absolute; left:0; top:0;}
+	.banner .items .i1{background:url(../img/header/1.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i2{background:url(../img/header/2.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i3{background:url(../img/header/3.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i4{background:url(../img/header/4.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i5{background:url(../img/header/5.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i6{background:url(../img/header/6.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i6{background:url(../img/header/7.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .i6{background:url(../img/header/8.jpg)no-repeat 50% 50%; background-size:cover;}
+	.banner .items .active{opacity:1;}
+
+
+	.servicesblock{margin:50px 0;}
+	.servicesblock .left{float:left; width:calc(70% - 100px); margin-right:100px;}
+	.servicesblock .right{float:right; width:30%;}
+	.servicesblock p{font-size:110%; line-height:30px;}
+	.servicesblock h3{font-size:130%;}
+
+	
+	.consultation_block{width:100%; height:500px; background:url(../img/banner2.jpg)no-repeat 50% 30%; background-size:cover;}
+	.consultation_block .left{width:60%; float:left; margin:70px 0;}
+	.consultation_block p{font-size:150%; margin:50px 0;}
+	.consultation_block .btn{font-family:SF_FONT; font-weight:550; font-size:130%; color:#171719; text-decoration:none; outline:none; border:2px solid #204E78; border-radius:3px; padding:10px 25px; transition:all 500ms ease;}
+	.consultation_block .btn:hover{color:#fff; border:2px solid #204E78; background:#204E78;}
+
+	.lawyers{margin:80px 0; margin-bottom:100px; display:none;}
+	.lawyers .flexLawyers{margin:50px 0; display:flex; flex-wrap:wrap; justify-content:space-around;}
+	.lawyers .flexLawyers .item{width:25%; position:relative; margin:50px 1%;}
+	.lawyers .flexLawyers .item .image{width:128px; height:128px; background:url(../img/lawyer.jpg)no-repeat 50% 50%; background-size:cover; border-radius:100%; margin:0 auto; position:relative; z-index:5; box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+	.lawyers .flexLawyers .item .stars{position:relative; z-index:5; text-align:center; top:-15px; margin-bottom:-25px;}
+	.lawyers .flexLawyers .item .stars div{width:25px; height:25px; background:url(../img/star.png)no-repeat 50% 50%; background-size:100%; display:inline-block; margin:0 -5px;}
+	.lawyers .flexLawyers .item .container{background:#fff; border-radius:3px; padding:15px; padding-top:90px; position:relative; top:-70px; z-index:1; margin-bottom:-70px; box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+	.lawyers .flexLawyers .item .container .name{font-family:SF_FONT; font-weight:600; font-size:130%; color:#171719; text-align:center; display:block;}
+	.lawyers .flexLawyers .item .container .description{font-family:SF_FONT; font-weight:400; font-size:90%; color:#777; text-align:center; display:block; margin:5px 0;}
+	.lawyers .flexLawyers .item .container .stage{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; text-align:center; display:block; margin:5px 0;}
+	.lawyers .flexLawyers .item .button{text-align:center; position:relative; top:5px;}
+	.lawyers .flexLawyers .item .button .btn{font-family:SF_FONT; font-weight:400; font-size:100%; color:#fff; background:#204E78; text-decoration:none; outline:none; padding:10px 20px; border-radius:0 0 3px 3px; box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+
+	.feedback{background:#999; background:url(../img/banner.jpg)no-repeat 50% 50%; background-size:cover; width:100%; height:500px;}
+	.feedback .left{width:30%; float:left;}
+	.feedback .left h2{color:#204E78; font-size:180%;}
+	.feedback .left input{border:0; outline:none; background:#204e78b0; border:2px solid #204E78; padding:10px 20px; border-radius:3px; width:calc(100% - 42px); font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; margin-bottom:10px;}
+	.feedback .left textarea{border:0; outline:none; background:#204e78b0; border:2px solid #204E78; padding:10px 20px; border-radius:3px; width:calc(100% - 42px); font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; margin-bottom:10px; min-height:30px; max-height:70px; resize:vertical;}
+	.feedback .left .warning{font-family:SF_FONT; font-weight:400; font-size:90%; color:#204E7899; display:block; margin-bottom:25px;}
+	.feedback .left .btn{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; background:#204E78; text-decoration:none; outline:none; padding:20px 0; border-radius:3px; box-shadow:0 15px 30px rgba(0,0,0,0.1); display:block; width:100%; text-align:center; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease;}
+	.feedback .left .btn:hover{box-shadow:0 0 0 transparent;}
+	.feedback input::placeholder{color:#fff; opacity:1;}
+	.feedback input:-ms-input-placeholder{color:#fff;}
+	.feedback input::-ms-input-placeholder {color:#fff;}
+	.feedback textarea::placeholder{color:#fff; opacity:1;}
+	.feedback textarea:-ms-input-placeholder{color:#fff;}
+	.feedback textarea::-ms-input-placeholder {color:#fff;}
+
+	.footerLine{height:30px; background:#204E78;}
+	
+	footer{background:#163856;}
+	footer .left{width:45%; float:left;}
+		footer .left .logo{width:100%; height:50px; float:left; background:url(../img/logo_white.png)no-repeat 0% 50%; background-size:contain; margin:25px 0;}
+		footer .left .link{font-family:SF_FONT; font-weight:400; font-size:90%; color:#1963a7; text-decoration:none; outline:none; display:block; margin:5px 0;}
+		footer .left .author{font-family:SF_FONT; font-weight:400; font-size:100%; color:#fff; display:block; margin:20px 0; width:80%;}
+	footer .center{width:25%; float:left;}
+		footer .center .menu{margin-top:30px;}
+		footer .center .menu a{font-family:SF_FONT; font-weight:600; font-size:110%; color:#999; outline:none; text-decoration:none; transition:all 500ms ease; display:block; margin:10px 0;}
+	footer .right{width:30%; float:right;}
+		footer .right .phone{margin:10px 0; margin-top:35px;}
+		footer .right .phone .icon{width:20px; height:20px; background:url(../img/phone.svg)no-repeat 50% 50%; background-size:100%; float:left; margin-right:10px;}
+		footer .right .phone .text{font-family:SF_FONT; font-weight:500; font-size:120%; color:#fff;}
+		footer .right .address{margin:10px 0; margin-bottom:40px;}
+		footer .right .address .icon{width:20px; height:20px; background:url(../img/mappoint.svg)no-repeat 50% 50%; background-size:100%; float:left; margin-right:10px;}
+		footer .right .address .text{font-family:SF_FONT; font-weight:500; font-size:100%; color:#fff;}
+
+
+.FeedBackForm{position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:none;}
+.FeedBackForm .window{position:relative; margin:15vh auto; width:400px; border-radius:3px; background:#fff; padding:25px;}
+.FeedBackForm .window .headline{position:relative; margin-bottom:15px;}
+.FeedBackForm .window .headline .close{position:absolute; right:0; top:0; width:16px; height:16px; cursor:pointer; background:url(../img/close_black.svg)no-repeat 50% 50%; background-size:100%;}
+.FeedBackForm .window .headline span{font-family:SF_FONT; font-weight:500; font-size:120%; color:#171719;}
+.FeedBackForm .window .container textarea{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; width:calc(100% - 22px); min-height:30px; max-height:70px; resize:vertical; border:1px solid #ccc; border-radius:3px; outline:none; padding:10px; margin:10px 0;}
+.FeedBackForm .window .container input{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; width:calc(100% - 22px); resize:vertical; border:1px solid #ccc; border-radius:3px; outline:none; padding:10px; margin:10px 0;}
+.FeedBackForm .window .container .g-recaptcha{margin:10px 0 !important; margin-bottom:20px !important;}
+.FeedBackForm .window .container .btn{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; text-decoration:none; outline:none; display:block; text-align:center; padding:20px 0; border-radius:3px; background:#204E78; width:100%; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease;}
+.FeedBackForm .window .container .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+
+.AdvokatFB_Form{position:absolute; left:0; top:0; width:100%; height:100%; z-index:999; display:none;}
+.AdvokatFB_Form_Shadow{position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:998; display:none;}
+.AdvokatFB_Form .window{position:relative; margin:15vh auto; width:500px; border-radius:3px; background:#fff; padding:25px; box-shadow:0 15px 30px rgba(0,0,0,0.5);}
+.AdvokatFB_Form .window .headline{position:relative; margin-bottom:15px;}
+.AdvokatFB_Form .window .headline .close{position:absolute; right:0; top:0; width:16px; height:16px; cursor:pointer; background:url(../img/close_black.svg)no-repeat 50% 50%; background-size:100%;}
+.AdvokatFB_Form .window .headline span{font-family:SF_FONT; font-weight:500; font-size:120%; color:#171719;}
+.AdvokatFB_Form .window .container .label{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; margin-top:25px; margin-bottom:10px;}
+.AdvokatFB_Form .window .container .setervalue{font-family:SF_FONT; font-weight:500; font-size:100%; color:#171719; display:block; margin-top:5px; margin-bottom:10px;}
+.AdvokatFB_Form .window .container textarea{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; width:calc(100% - 22px); min-height:30px; max-height:70px; resize:vertical; border:1px solid #ccc; border-radius:3px; outline:none; padding:10px; margin:10px 0;}
+.AdvokatFB_Form .window .container input{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; width:calc(100% - 22px); resize:vertical; border:1px solid #ccc; border-radius:3px; outline:none; padding:10px; margin:10px 0;}
+.AdvokatFB_Form .window .container select{font-family:SF_FONT; font-weight:400; font-size:100%; color:#171719; width:100%; resize:vertical; border:1px solid #ccc; border-radius:3px; outline:none; padding:10px; margin:10px 0;}
+.AdvokatFB_Form .window .container .g-recaptcha{margin:10px 0 !important; margin-bottom:20px !important;}
+.AdvokatFB_Form .window .container .btn{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; text-decoration:none; outline:none; display:block; text-align:center; padding:20px 0; border-radius:3px; background:#204E78; width:100%; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease;}
+.AdvokatFB_Form .window .container .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+	НАВИГАЦИЯ
+\*------------------------------------*/
+nav {
+
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+  width:180px;
+  margin-right:15px;
+}
+.topmenu > li > a {
+  font-family: "SF_FONT";
+  padding: 20px 30px;
+  font-size: 14px;
+  font-weight:500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff77;
+}
+nav active:after, .submenu-link:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  color: inherit;
+  margin-left: 10px;
+}
+.topmenu .active, .topmenu > li > a:hover{color: #fff;}
+.submenu li a:hover {color: #fff; background:#163857;}
+.submenu {
+  position: absolute;
+  left: -1px;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;  
+  transform: translateY(10px);
+  transition: .3s ease-in-out;
+}
+.submenu li {position: relative;}
+.submenu a {
+  background: #204E78;
+  border-top: 1px solid #163857;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  width:100%;
+  font-family: "SF_FONT";
+}
+.submenu .submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  left: -webkit-calc(100% - 1px);
+}
+nav li:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+
+
+
+
+
+.report_pages{margin:50px 0; padding:25px 0;}
+
+.report_pages .form1{display:none;}
+.report_pages .form2{display:none;}
+.report_pages .form3{display:none;}
+
+.report_pages .content{width:680px; margin:0 auto; margin-top:50px;}
+.report_pages p{font-size:20px; line-height:35px; margin:10px 0;}
+.report_pages .label{font-family:SF_FONT; font-weight:400; font-size:14px; color:#777; display:block; margin:10px 0;}
+.report_pages label{font-family:SF_FONT; font-weight:400; font-size:110%; color:#444; display:block; margin:10px 0;}
+.report_pages input{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; margin:10px 0; width:calc(100% - 32px); outline:none; border:1px solid #babbbc; padding:10px 15px;}
+.report_pages input[type=radio]{display:inline-block; width:auto; margin-right:10px;}
+.report_pages textarea{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; margin:10px 0; width:calc(100% - 32px); outline:none; border:1px solid #babbbc; padding:10px 15px; resize:vertical; min-height:70px;}
+.report_pages .btn{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; text-decoration:none; outline:none; display:block; text-align:center; padding:20px 0; border-radius:3px; background:#204E78; width:100%; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease; margin-bottom:50px;}
+.report_pages .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+.collegia_table{width:100%; margin:25px 0;}
+.collegia_table .header{overflow:hidden; border-radius:3px 3px 0 0;}
+.collegia_table .header .id{width:calc(10% - 10px); float:left; background:#163857; padding:5px;}
+.collegia_table .header .name{width:calc(50% - 10px); float:left; background:#163857; padding:5px;}
+.collegia_table .header .city{width:calc(25% - 10px); float:left; background:#163857; padding:5px;}
+.collegia_table .header .counter{width:calc(15% - 10px); float:right; background:#163857; padding:5px;}
+.collegia_table .header div span{font-family:SF_FONT; font-weight:400; font-size:100%; color:#fff; display:block; text-align:center;}
+.collegia_table .container{cursor:pointer; overflow:hidden; border-radius:0 0 3px 3px;}
+.collegia_table .container .id{width:calc(10% - 11px); float:left; background:#fff; padding:5px; border-right:1px solid #ccc; height:60px;}
+.collegia_table .container .name{width:calc(50% - 11px); float:left; background:#fff; padding:5px; border-right:1px solid #ccc; height:60px;}
+.collegia_table .container .city{width:calc(25% - 11px); float:left; background:#fff; padding:5px; border-right:1px solid #ccc; height:60px;}
+.collegia_table .container .counter{width:calc(15% - 10px); float:right; background:#fff; padding:5px; height:60px;}
+.collegia_table .container div span{font-family:SF_FONT; font-weight:500; font-size:105%; color:#171719; display:block; text-align:center;}
+.collegia_table .container .item{border-bottom:1px solid #ccc;}
+.collegia_table .container .item:last-child{border-bottom:0;}
+
+
+.servicesblock2{}
+.servicesblock2 .left{width:calc(20% - 50px); float:left; margin-right:50px;}
+.servicesblock2 .left .advk_menu{padding:0; margin-top:40px;}
+.servicesblock2 .left .advk_menu .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; display:block; text-align:center; padding:10px 0; border-radius:3px; background:#204E78; width:100%; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease; margin-bottom:25px;}
+.servicesblock2 .left .advk_menu .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+.servicesblock2 .center{width:80%; float:left;}
+.servicesblock2 .center .js_lawyers{margin:50px 0;}
+.servicesblock2 .center .js_lawyers td{border-right:1px solid #ccc; border-bottom:1px solid #ccc; padding:5px; font-family:SF_FONT; font-weight:400; font-size:14px; color:#171719;}
+.servicesblock2 .center .js_lawyers td a{color:#171719; text-decoration:none; outline:none; cursor:default;}
+.servicesblock2 .center .js_lawyers tbody th{border-right:1px solid #ccc; border-bottom:1px solid #ccc; padding:5px; font-family:SF_FONT; font-weight:700; font-size:14px; color:#171719;}
+.servicesblock2 .center .advokats2{display:none;}
+.servicesblock2 .center .jsl2{border:1px solid #ddd;}
+.servicesblock2 .center .jsl2 td{border:0; border-bottom:1px solid #ccc;}
+
+
+.content{width:680px; margin:0 auto; margin:50px auto;}
+.content p{font-size:20px; line-height:35px; margin:10px 0;}
+.content .label{font-family:SF_FONT; font-weight:400; font-size:14px; color:#777; display:block; margin:10px 0;}
+.content label{font-family:SF_FONT; font-weight:400; font-size:110%; color:#444; display:block; margin:10px 0;}
+.content input{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; margin:10px 0; width:calc(100% - 32px); outline:none; border:1px solid #babbbc; padding:10px 15px;}
+.content input[type=radio]{display:inline-block; width:auto; margin-right:10px;}
+.content textarea{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; margin:10px 0; width:calc(100% - 32px); outline:none; border:1px solid #babbbc; padding:10px 15px; resize:vertical; min-height:70px;}
+.content .btn{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; text-decoration:none; outline:none; display:block; text-align:center; padding:20px 0; border-radius:3px; background:#204E78; width:100%; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease; margin-bottom:50px;}
+.content .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+.servicesblock2 .page2{margin:60px 0;}
+.servicesblock2 .page2 p{font-size:20px; line-height:35px; margin:10px 0; text-align:justify;}
+
+
+.peoples_krsk{background:#ddd; width:100%; height:500px; overflow:hidden;}
+.peoples_krsk h3{font-family:SF_FONT; font-weight:600; font-size:150%; color:#171719; margin:0; padding:0; padding-top:35px; margin-bottom:20px; display:block;}
+.peoples_krsk .flexPeoples{position:relative; z-index:1;}
+.peoples_krsk .flexPeoples .item{width:calc(22% - 70px); height:315px; padding:5px; background:#ffffff77; margin:20px; outline:none !important; text-align:center;}
+.peoples_krsk .flexPeoples .item .position{font-family:SF_FONT; font-weight:400; font-size:12px; color:#171719; display:block; width:80%; margin:10px auto;}
+.peoples_krsk .flexPeoples .item p{font-family:SF_FONT; font-weight:600; font-size:15px; color:#171719; display:block; margin:0; width:80%; margin:10px auto;}
+.peoples_krsk .flexPeoples .item img{width:100%; height:150px;}
+
+
+.zapilil{padding:10px; background:#fff; box-shadow:0 15px 30px #cccccc55;}
+.zapilil h3{font-family:SF_FONT; font-weight:600; font-size:120%; color:#171719; margin:0; padding:0; padding-top:35px; margin-bottom:20px; display:block;}
+.zapilil p{font-family:SF_FONT; font-weight:600; font-size:15px; color:#171719; display:block; margin:0;}
+.zapilil .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:7px 15px; margin:10px; border-radius:3px; background:#204E78; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease; float:right;}
+.zapilil .btn:hover{background:#163856; box-shadow:0 0 0 transparent;}
+
+.index_services{padding:10px; margin:25px 0; background:transparent;}
+.index_services h3{text-align:center; margin:25px 0;}
+.index_services .flex{display:flex; flex-wrap:wrap; justify-content:space-around;}
+.flip-container{perspective:1000px;  margin:10px;}
+.flip-container:hover .flipper, .flip-container.hover .flipper{transform: rotateY(180deg);}
+.flip-container, .front, .back {width:190px; height:200px;}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	background:#fff; box-shadow:0 15px 30px #cccccc55;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	 overflow:hidden;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	 overflow:hidden;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.sbblock3{margin:70px 0;}
+
+.lawyers_sidebar{float:left; width:200px; margin-right:50px;}
+.lawyers_sidebar ul{list-style:none; list-style-type:none; margin:0; padding:0;}
+.lawyers_sidebar ul li{list-style:none; list-style-type:none; margin:0; padding:0;}
+.lawyers_sidebar a{font-family:SF_FONT; font-weight:400; font-size:90%; color:#171719; text-decoration:none; outline:none; padding:7px 15px; display:block; width:calc(100% - 30px); border-radius:0; background:#E6EBEC; transition:all 500ms ease;}
+.lawyers_sidebar .active{background:#163856; color:#fff;}
+.lawyers_sidebar a:hover{background:#163856; color:#fff;}
+
+.lawyers_list{float:right; width:calc(100% - 250px);}
+.lawyers_list .item{background:#fff; margin:5px 0; border-radius:3px; padding:10px; margin:10px 0;}
+.lawyers_list .item .name{font-family:SF_FONT; font-weight:600; font-size:18px; color:#171719; display:block; float:left;}
+.lawyers_list .item .btns{float:right;}
+.lawyers_list .item .btns a{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:7px 15px; border-radius:3px; background:#6e859b; transition:all 500ms ease; top:2px; right:-6px; position:relative;}
+.lawyers_list .item .btns a:hover{background:#163856;}
+
+.sbbock2 .page3{margin-bottom:70px;}
+.sbbock2 .btnline{font-family:SF_FONT; font-weight:400; font-size:110%; color:#fff; text-decoration:none; outline:none; padding:10px 0; margin:50px auto; display:block; text-align:center; border-radius:3px; background:#204E78; box-shadow:0 15px 30px #204E7844; transition:all 500ms ease; width:30%;}
+.sbbock2 .btnline:hover{background:#163856; box-shadow:0 0 0 transparent;}
+.sbbock2 .disclaymer p{color:#555; font-size:12px;}
+.sbbock2 h3{font-family:SF_FONT; font-weight:600; font-size:150%; color:#171719; margin:0; padding:0; margin:50px 0; margin-top:100px; display:block; text-align:center;}
+
+.sbbock2 .blacklistlaw_list{margin:50px 0;}
+.sbbock2 .blacklistlaw_list .item{margin:0; padding:10px 0; border-bottom:1px solid #E6EBEC;}
+.sbbock2 .blacklistlaw_list .item .avatar{width:calc(12% - 15px); float:left; margin-right:15px;}
+.sbbock2 .blacklistlaw_list .item .name{width:calc(40% - 15px); float:left; margin-right:15px;}
+.sbbock2 .blacklistlaw_list .item .regnum{width:calc(18% - 15px); float:left; margin-right:15px;}
+.sbbock2 .blacklistlaw_list .item .feedbacks{width:calc(15% - 15px); float:left; margin-right:15px;}
+.sbbock2 .blacklistlaw_list .item .state{width:15%; float:right;}
+
+.sbbock2 .blacklistlaw_list .item .avatar span{display:none; position:relative;}
+.sbbock2 .blacklistlaw_list .item .name span{font-family:SF_FONT; font-weight:700; font-size:130%; color:#171719; display:block; position:relative; top:25px;}
+.sbbock2 .blacklistlaw_list .item .regnum span{font-family:SF_FONT; font-weight:500; font-size:110%; color:#171719; display:block; text-align:center; position:relative; top:25px;}
+.sbbock2 .blacklistlaw_list .item .feedbacks span{font-family:SF_FONT; font-weight:500; font-size:110%; color:#171719; display:block; text-align:center; position:relative; top:25px;}
+.sbbock2 .blacklistlaw_list .item .state span{font-family:SF_FONT; font-weight:500; font-size:110%; color:#171719; display:block; text-align:center; position:relative; top:25px;}
+
+.sbbock2 .blacklistlaw_list .main{padding:5px 0; background:#E6EBEC;}
+
+.sbbock2 .blacklistlaw_list .main .avatar span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center; top:7px;}
+.sbbock2 .blacklistlaw_list .main .name span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center; top:7px;}
+.sbbock2 .blacklistlaw_list .main .regnum span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center; top:0;}
+.sbbock2 .blacklistlaw_list .main .feedbacks span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center; top:7px;}
+.sbbock2 .blacklistlaw_list .main .state span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center; top:7px;}
+
+.sbbock2 .blacklistlaw_list .i1 .avatar{background:#E6EBEC; height:90px;}
+.sbbock2 .blacklistlaw_list .i2 .avatar{background:#E6EBEC; height:90px;}
+.sbbock2 .blacklistlaw_list .i3 .avatar{background:#E6EBEC; height:90px;}
+.sbbock2 .blacklistlaw_list .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+
+.sbbock2 .listlawyers_search{overflow:hidden; border-radius:3px; box-shadow:0 15px 30px #E6EBEC;}
+.sbbock2 .listlawyers_search .search{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; width:calc(100% - 130px); outline:none; border:1px solid #babbbc; padding:10px 15px; float:left; border-radius:3px 0 0 3px;}
+.sbbock2 .listlawyers_search .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:12px 0; border-radius:0 3px 3px 0; background:#204E78; transition:all 500ms ease; float:right; display:block; text-align:center; width:130px; cursor:pointer; border:0; outline:none;}
+
+
+
+.sbbock3 .med_list{margin:50px 0;}
+.sbbock3 .med_list .item{margin:0; padding:10px 0; border-bottom:1px solid #E6EBEC;}
+.sbbock3 .med_list .item .name{width:calc(40% - 15px); float:left; margin-right:15px;}
+.sbbock3 .med_list .item .address{width:calc(30% - 15px); float:left; margin-right:15px;}
+.sbbock3 .med_list .item .site{width:calc(15% - 15px); float:left; margin-right:15px;}
+.sbbock3 .med_list .item .report{width:calc(15% - 15px); float:left; margin-right:15px;}
+
+.sbbock3 .med_list .item .name span{font-family:SF_FONT; font-weight:700; font-size:100%; color:#171719; display:block;}
+.sbbock3 .med_list .item .address span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+.sbbock3 .med_list .item .site{text-align:center;}
+.sbbock3 .med_list .item .report{text-align:center;}
+.sbbock3 .med_list .item .site .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:5px 10px; border-radius:3px; background:#204E78; transition:all 500ms ease; border:0; outline:none;}
+.sbbock3 .med_list .item .report .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:5px 10px; border-radius:3px; background:#204E78; transition:all 500ms ease; border:0; outline:none;}
+
+.sbbock3 .med_list .main{padding:5px 0; background:#E6EBEC;}
+
+.sbbock3 .med_list .main .name span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.sbbock3 .med_list .main .address span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.sbbock3 .med_list .main .site span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.sbbock3 .med_list .main .report span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+
+.sbbock3 .med_list .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+
+.sbbock3 .listlawyers_search{overflow:hidden; border-radius:3px; box-shadow:0 15px 30px #E6EBEC;}
+.sbbock3 .listlawyers_search .search{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; width:calc(100% - 130px); outline:none; border:1px solid #babbbc; padding:10px 15px; float:left; border-radius:3px 0 0 3px;}
+.sbbock3 .listlawyers_search .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:12px 0; border-radius:0 3px 3px 0; background:#204E78; transition:all 500ms ease; float:right; display:block; text-align:center; width:130px; cursor:pointer; border:0; outline:none;}
+
+.sbbock3 .center{width:100%; float:none;}
+
+
+
+.pleaders{}
+.pleaders .search_block{overflow:hidden; border-radius:3px; box-shadow:0 15px 30px #E6EBEC;}
+.pleaders .search_block .search{font-family:SF_FONT; font-weight:400; font-size:16px; color:#171719; display:block; width:calc(100% - 130px); outline:none; border:1px solid #babbbc; padding:10px 15px; float:left; border-radius:3px 0 0 3px;}
+.pleaders .search_block .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:12px 0; border-radius:0 3px 3px 0; background:#204E78; transition:all 500ms ease; float:right; display:block; text-align:center; width:130px; cursor:pointer; border:0; outline:none;}
+
+
+.pleaders .advokats1 .table_block{margin:50px 0;}
+.pleaders .advokats1 .table_block .item{margin:0; padding:10px 0; border-bottom:1px solid #E6EBEC;}
+.pleaders .advokats1 .table_block .item .name{width:calc(30% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats1 .table_block .item .regnum{width:calc(15% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats1 .table_block .item .numudostov{width:calc(15% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats1 .table_block .item .address{width:calc(20% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats1 .table_block .item .phone{width:calc(15% - 15px); float:left; margin-right:15px;}
+
+.pleaders .advokats1 .table_block .item .name span{font-family:SF_FONT; font-weight:700; font-size:100%; color:#171719; display:block;}
+.pleaders .advokats1 .table_block .item .regnum span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .item .numudostov span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .item .address span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+.pleaders .advokats1 .table_block .item .phone span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block; text-align:center;}
+
+.pleaders .advokats1 .table_block .main{padding:5px 0; background:#E6EBEC;}
+
+.pleaders .advokats1 .table_block .main .name span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .main .regnum span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .main .numudostov span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .main .address span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats1 .table_block .main .phone span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+
+.pleaders .advokats1 .table_block .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+
+
+
+
+.pleaders .advokats2 .table_block{margin:50px 0;}
+.pleaders .advokats2 .table_block .item{margin:0; padding:10px 0; border-bottom:1px solid #E6EBEC;}
+.pleaders .advokats2 .table_block .item .name{width:calc(40% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats2 .table_block .item .form{width:calc(20% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats2 .table_block .item .contacts{width:calc(20% - 15px); float:left; margin-right:15px;}
+.pleaders .advokats2 .table_block .item .director{width:calc(20% - 15px); float:left; margin-right:15px;}
+
+.pleaders .advokats2 .table_block .item .name span{font-family:SF_FONT; font-weight:700; font-size:100%; color:#171719; display:block;}
+.pleaders .advokats2 .table_block .item .form span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+.pleaders .advokats2 .table_block .item .contacts span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+.pleaders .advokats2 .table_block .item .director span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+
+.pleaders .advokats2 .table_block .main{padding:5px 0; background:#E6EBEC;}
+
+.pleaders .advokats2 .table_block .main .name span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats2 .table_block .main .form span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats2 .table_block .main .contacts span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.pleaders .advokats2 .table_block .main .director span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+
+.pleaders .advokats2 .table_block .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+.pleaders .advokats2 .table_block .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+
+.obrazovanie .left{display:none;}
+.obrazovanie .center{float:none; width:100%;}
+
+.obrazovanie .table_block{margin:50px 0;}
+.obrazovanie .table_block .item{margin:0; padding:10px 0; border-bottom:1px solid #E6EBEC;}
+.obrazovanie .table_block .item .name{width:calc(40% - 15px); float:left; margin-right:15px;}
+.obrazovanie .table_block .item .address{width:calc(30% - 15px); float:left; margin-right:15px;}
+.obrazovanie .table_block .item .map{width:calc(15% - 15px); float:left; margin-right:15px;}
+.obrazovanie .table_block .item .feedbackx{width:calc(15% - 15px); float:left; margin-right:15px;}
+
+.obrazovanie .table_block .item .name span{font-family:SF_FONT; font-weight:700; font-size:100%; color:#171719; display:block;}
+.obrazovanie .table_block .item .address span{font-family:SF_FONT; font-weight:500; font-size:90%; color:#555; display:block;}
+.obrazovanie .table_block .item .map .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:5px 10px; border-radius:3px; background:#204E78; transition:all 500ms ease; cursor:pointer; border:0; outline:none; position:relative; top:5px;}
+.obrazovanie .table_block .item .feedbackx .btn{font-family:SF_FONT; font-weight:400; font-size:90%; color:#fff; text-decoration:none; outline:none; padding:5px 10px; border-radius:3px; background:#204E78; transition:all 500ms ease; cursor:pointer; border:0; outline:none; position:relative; top:5px;}
+
+
+.obrazovanie .table_block .main{padding:5px 0; background:#E6EBEC;}
+.obrazovanie .table_block .map{display:block; text-align:center;}
+.obrazovanie .table_block .feedbackx{display:block; text-align:center;}
+
+.obrazovanie .table_block .main .name span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.obrazovanie .table_block .main .address span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.obrazovanie .table_block .main .map span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+.obrazovanie .table_block .main .feedbackx span{font-family:SF_FONT; font-weight:600; font-size:90%; color:#171719; display:block; text-align:center;}
+
+.obrazovanie .table_block .empty span{font-family:SF_FONT; font-weight:400; font-size:90%; color:#999; display:block; text-align:center; padding:15px 0;}
+
+
+
+.indexpage .left{float:left; width:calc(23% - 50px); margin-right:50px;}
+.indexpage .center{float:left; width:calc(47% - 50px); margin-right:50px;}
+.indexpage .right{float:right; width:30%;}
+
+.indexpage .left .goverment_links{padding:25px 0; padding-bottom:0;}
+.indexpage .left .goverment_links a img{width:100%; height:auto; margin:15px 0; border-radius:3px; display:block;}
+
+.indexpage .left .btn{padding:15px; background:#204E78; font-family:SF_FONT; font-weight:500; font-size:100%; color:#fff; text-decoration:none; outline:none; border-radius:3px; box-shadow:0 15px 30px #204E7855; transition:all 500ms ease; display:block; width:calc(100% - 30px); text-align:center; margin:10px auto; margin-bottom:15px;}
+.indexpage .left .btn:hover{box-shadow:0 0px 0px transparent;}
+
+	.right .phone{margin:25px 0;}
+	.right .phone .icon{width:calc(30% - 10px); height:70px; margin:10px 0; margin-right:10px; float:left; position:relative; top:-10px;}
+	.right .phone .texts{width:70%; float:right;}
+	.right .phone .texts .name{font-family:SF_FONT; font-weight:400; font-size:100%; color:#575759; letter-spacing:1px; display:block; margin-bottom:5px;}
+	.right .phone .texts .value{font-family:SF_FONT; font-weight:600; font-size:120%; color:#171719; display:block;}
+	.right .search_on_site_line{font-family:SF_FONT; font-weight:400; font-size:90%; color:#171719; display:block; width:calc(100% - 22px); border:2px solid #ccc; border-radius:3px; padding:5px 10px; outline:none;}
+
+.indexpage .center .btnx{padding:15px; background:#204E78; font-family:SF_FONT; font-weight:500; font-size:100%; color:#fff; text-decoration:none; outline:none; border-radius:3px; box-shadow:0 15px 30px #204E7855; transition:all 500ms ease; display:block; width:calc(100% - 30px); text-align:center; margin:10px auto; margin-bottom:15px;}
+.indexpage .center .btnx:hover{box-shadow:0 0px 0px transparent;}
+
+.indexpage .fts_talks{margin:25px 0;}
+.indexpage .fts_talks .left{width:480px; height:320px; border-radius:3px; background:#eee; float:left; margin:0 25px;}
+.indexpage .fts_talks .left video{width:100%; height:100%;}
+.indexpage .fts_talks .right{width:480px; height:320px; border-radius:3px; background:#eee; float:right; margin:0 25px;}
+.indexpage .fts_talks .right .loading{margin:30% 0;}
+.indexpage .fts_talks .right .loading div{width:100%; height:30px; background:url(../img/animation_2.svg)no-repeat 50% 50%; background-size:contain;}
+.indexpage .fts_talks .right .loading span{font-family:SF_FONT; font-weight:600; font-size:100%; color:#17171977; display:block; text-align:center;}
+
+
+
+
+
+.adv_block{background:#cecece; width:100%; height:300px; overflow:hidden;}
+.adv_block h3{font-family:SF_FONT; font-weight:600; font-size:110%; color:#35353755; text-transform:uppercase; letter-spacing:1px; margin:0; padding:0; padding-top:35px; margin-bottom:20px; display:block; text-align:center;}
+.adv_block .items{position:relative; overflow:hidden; height:160px;}
+.adv_block .items .item{width:100%; padding:5px; background:#e0e0e0; position:absolute; opacity:0; top:160px; transition:all 500ms ease; cursor:pointer;}
+.adv_block .items .active{opacity:1; top:0px;}
+.adv_block .items .item img{width:calc(30% - 15px); height:150px; float:left; margin-right:15px;}
+.adv_block .items .item .text{width:70%; float:right;}
+.adv_block .items .item .text p{font-family:SF_FONT; font-weight:600; font-size:16px; color:#171719; display:block; margin:0; width:100%; margin:10px auto; text-align:left;}
+.adv_block .items .item .text .position{font-family:SF_FONT; font-weight:400; font-size:14px; color:#171719; display:block; width:100%; margin:10px auto; text-align:left;}
+
