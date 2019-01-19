@@ -1,0 +1,246 @@
+.sidebar {
+    width: calc(20% - 20px);
+    padding-top: 20px;
+}
+.sidebar .btn {
+    margin: 10px;
+    margin-top: 0;
+}
+main {
+    width: calc(80% - 30px);
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.search_block {
+    display: flex;
+}
+.search_block input {
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 16px;
+    color: #171719;
+    display: block;
+    width: calc(100% - 130px);
+    outline: none;
+    border: 1px solid #babbbc;
+    padding: 10px 15px;
+    float: left;
+    border-radius: 3px 0 0 3px;
+}
+.search_block button {
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 90%;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    padding: 12px 0;
+    border-radius: 0 3px 3px 0;
+    background: #204E78;
+    transition: all 500ms ease;
+    float: right;
+    display: block;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: scroll;
+    font-size: 1.3vw;
+    margin-bottom: 40px;
+}
+h2 {
+    padding: 15px 5px;
+    font-weight: 600;
+    font-size: xx-large;
+}
+p {
+    padding-left: 10px;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+thead {
+    font-weight: 600;
+    background-color: #E6EBEC;
+}
+td {
+    padding: 10px;
+}
+body > div.container {
+    width: 100%;
+}
+
+.feedback {
+    background: #999;
+    background: url(../img/banner.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+.feedback .left {
+    width: 30%;
+    min-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.clear {
+    clear: both;
+}
+.feedback .left h2 {
+    color: #204E78;
+    font-size: 2em;
+    font-family: SF_FONT;
+    font-weight: 600;
+}
+.feedback input::placeholder, textarea::placeholder {
+    color: whitesmoke;
+}
+.feedback .left input, textarea {
+    outline: none;
+    background: #204e78b0;
+    border: 2px solid #204E78;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: calc(100% - 44px);
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.feedback .left .warning {
+    font-family: SF_FONT;
+    font-size: .9em;
+    color: #204E7899;
+    display: block;
+    padding: 0 4px;
+    margin-bottom: 25px;
+}
+
+
+.FeedBackForm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.headline {
+    position: relative;
+    margin-bottom: 15px;
+}
+.headline span {
+    font-family: SF_FONT;
+    font-weight: 500;
+    font-size: 120%;
+    color: #171719;
+}
+.headline .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url(../img/close_black.svg)no-repeat 50% 50%;
+    background-size: 100%;
+}
+.window .label {
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 90%;
+    color: #999;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.window input , select{
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 100%;
+    color: #171719;
+    width: calc(100% - 22px);
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+.window textarea::placeholder {
+    color: gray;
+}
+.window textarea {
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 100%;
+    color: #171719;
+    width: calc(100% - 22px);
+    min-height: 30px;
+    max-height: 70px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: unset;
+}
+select {
+    width: 100%;   
+}
+.shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 998;
+}
+.window {
+    position: relative;
+    margin: 15vh auto;
+    width: 500px;
+    border-radius: 3px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 750px) {
+    body > div.container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    main {
+        width: calc(100% - 30px);
+    }
+    table {
+        font-size: 1.5vw;
+    }
+    .feedback .left h2 {
+        font-size: 1.5em;
+    }
+    .feedback .left input, textarea {
+        font-size: .7em;
+    }
+    .feedback .left .warning {
+        font-size: .7em;
+    }
+}
+
