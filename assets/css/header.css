@@ -1,0 +1,248 @@
+* {
+    font-family: SF_FONT;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+}
+
+header {
+    width: calc(100% - 5vw);
+    padding: 2.5vw;
+    background: linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.burger > i {
+    display: none;
+}
+
+
+nav {
+    text-transform: uppercase;
+    background-color: #344C64;
+    list-style-type: none;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    padding: 15px;
+}
+nav a {
+    color: #ffffff77;
+    text-decoration-line: none;
+}
+nav ul {
+    list-style-type: none;
+}
+nav li:hover a {
+    color: whitesmoke;
+}
+.link_to_submenu ul {
+    transition: 0.3s linear;
+    opacity: 0;
+    z-index: 5;
+    top: 100%;
+    position: absolute;
+    padding: 0;
+    visibility: hidden;
+    font-size: small;
+    color: #fff;
+    background-color: #204E78;
+}
+.link_to_submenu:hover ul {
+    z-index: 6;
+    visibility: visible;
+    animation: show_down 0.25s linear forwards;
+}
+.link_to_submenu:not(:hover) ul {
+    animation: show_down-back 0.25s linear;
+}
+@keyframes show_down {
+ from {
+    opacity: 0;
+    top: 110%;
+ } to {
+    opacity: 1;
+    top: 100%;
+ }
+}
+@keyframes show_down-back {
+    from {
+        opacity: 1;
+        top: 100%;
+    } to {
+        opacity: 0;
+        top: 110%;
+     }
+}
+ul.container {
+    margin: 0;
+    position: relative;
+    align-items: center;
+}
+.submenu li {
+    border-top: 1px solid #163857;
+    transition: background 0.2s linear;
+}
+.submenu li:hover {
+    background-color: #163857;
+}
+
+.logo {
+    width: 60%;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.icon {
+    height: 1em;
+}
+.phone {
+    font-size: 1.6em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn {
+    background-color: #204E78;
+    color: whitesmoke;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+.block {
+    margin-left: 50px;
+
+}
+.btn:hover {
+    background-color: #306494;
+}
+
+@media screen and (max-width: 960px) { 
+
+    .phone {
+        font-size: 1.3em;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    nav {
+        font-size: .9em;
+    }
+    nav li {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header .container{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .phone {
+        font-size: 1em;
+    }
+    .btn, nav {
+        font-size: .7em;
+    }
+    h3 {
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 556px) {
+    nav {
+        padding: 5px 0;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+    nav li {
+        width: 100%;
+    }
+    .burger {
+        display: block;
+        font-size: 1.4em;
+    }
+    .burger i:first-child {
+        opacity: 1;
+    }
+    .burger i:nth-child(2) {
+        opacity: 0;
+        display: none;
+    }
+    .burger.close i:first-child {
+        opacity: 0;
+        display: none;
+    }
+    .burger.close i:nth-child(2) {
+        opacity: 1;
+        display: block;
+    }
+    .burger i {
+        display: block;
+        color: whitesmoke;
+        opacity: 0;
+        transition: .3s linear;
+    }
+    .burger.close ul.container {
+        display: block;
+    }
+    .submenu {
+        visibility: hidden;
+        position: static;
+        background: transparent !important;
+        font-size: inherit !important;
+    }
+    .link_to_submenu:hover ul {
+        visibility: unset;
+        animation: unset;
+    }
+    .submenu li:hover {
+        background-color: unset;
+    }
+    .show {
+        visibility: visible !important;
+        position: static !important;
+        opacity: 1 !important;
+    }
+    .submenu li {
+        border: 0;
+    }
+    .link_to_submenu:not(:hover) ul {
+        animation: unset;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+    }
+    .logo {
+        width: 100%;
+    }
+    .phone {
+        display: flex;
+        justify-content: center;
+    }
+}
